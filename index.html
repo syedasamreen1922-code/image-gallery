@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Sheet — A Wandering Lens Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="masthead">
+        <div class="masthead__inner">
+            <p class="masthead__eyebrow">Roll No. CA/DF1/240383</p>
+            <h1 class="masthead__title">CONTACT&nbsp;SHEET</h1>
+            <p class="masthead__sub">A wandering lens gallery. Mountains, ocean, cities &amp; wildlife, developed frame by frame.</p>
+        </div>
+    </header>
+
+    <nav class="filters" aria-label="Filter photographs by category">
+        <button class="filter-btn is-active" data-filter="all">All Frames</button>
+        <button class="filter-btn" data-filter="mountains">Mountains</button>
+        <button class="filter-btn" data-filter="ocean">Ocean</button>
+        <button class="filter-btn" data-filter="cities">Cities</button>
+        <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+    </nav>
+
+    <main class="gallery" id="gallery" aria-live="polite">
+        <!-- Frames are rendered here by script.js -->
+    </main>
+
+    <p class="footnote">Click any frame to open the loupe view. Use the arrow keys to advance the roll.</p>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+        <button class="lightbox__close" id="lightboxClose" aria-label="Close viewer">&times;</button>
+
+        <button class="lightbox__nav lightbox__nav--prev" id="prevBtn" aria-label="Previous frame">&#8592;</button>
+
+        <figure class="lightbox__stage">
+            <div class="lightbox__frame">
+                <img class="lightbox__img" id="lightboxImg" src="" alt="">
+            </div>
+            <figcaption class="lightbox__meta">
+                <span class="lightbox__counter" id="lightboxCounter">FRAME 01/24</span>
+                <span class="lightbox__caption" id="lightboxCaption"></span>
+            </figcaption>
+        </figure>
+
+        <button class="lightbox__nav lightbox__nav--next" id="nextBtn" aria-label="Next frame">&#8594;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
